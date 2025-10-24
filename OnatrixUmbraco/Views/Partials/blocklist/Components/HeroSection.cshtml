@@ -19,12 +19,14 @@
 		<div class="hero-content">
 			<h1 class="hero-title">@content.HeroTitle</h1>
 			<p>@Html.Raw(content.HeroText)</p>
+       
+		
 			@if (content.HeroLink != null)
 			{
-				<a href="@content.HeroLink">@content.HeroLink.</a>
+				<a class="contact-button" href="@content.HeroLink.Url">@content.HeroLink.Name</a>
 			}
-
-		</div>
+		
+		 </div>
 	</div>
 
 </section>

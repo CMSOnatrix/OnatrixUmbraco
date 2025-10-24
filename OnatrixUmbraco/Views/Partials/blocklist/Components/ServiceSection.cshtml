@@ -6,16 +6,16 @@
     var sectionColor = settings?.ServiceBgColor?.Color ?? "#ffffff";
 }
 
-<section class="service-section" style="background-color:@sectionColor;>
+<section class="service-section" style="background-color:@sectionColor>
     <div class="service-container">
-        <div class="service-header">
+        <div class="service-header center-content">
             @if(settings!.ShowServiceLabel)
             {
-                <h2 class="service-label">@content.ServiceLabel</h2>
+                <div class="service-label label">@content.ServiceLabel</div>
             }
-)
+
             <div class="service-title">@Html.Raw(content.ServiceTitle)</div>
-           
+        </div>
         </div>
        @*  <div class="service-items">
             @if (content.ServiceItems != null && content.ServiceItems.Any())
@@ -33,5 +33,5 @@
                 }
             }
         </div> *@
-    </div>
+  
     </section>
