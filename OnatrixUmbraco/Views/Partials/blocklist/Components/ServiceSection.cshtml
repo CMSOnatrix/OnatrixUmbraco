@@ -6,7 +6,7 @@
     var sectionColor = settings?.ServiceBgColor?.Color ?? "#ffffff";
 }
 
-<section class="service-section" style="background-color:@sectionColor>
+<section class="service-section" style="background-color:@sectionColor">
     <div class="service-container">
         <div class="service-header center-content">
             @if(settings!.ShowServiceLabel)
@@ -16,22 +16,14 @@
 
             <div class="service-title">@Html.Raw(content.ServiceTitle)</div>
         </div>
-        </div>
-       @*  <div class="service-items">
-            @if (content.ServiceItems != null && content.ServiceItems.Any())
+        <div class="service-card-list">
+            @if (content.ServiceCardList != null)
             {
-                foreach (var item in content.ServiceItems)
+                foreach (var card in content.ServiceCardList)
                 {
-                    <div class="service-item">
-                        @if (item.ServiceIcon != null)
-                        {
-                            <img class="service-icon" src="@item.ServiceIcon.Url()" alt="@item.ServiceIcon.Name" />
-                        }
-                        <h3 class="service-item-title">@item.ServiceItemTitle</h3>
-                        <p class="service-item-description">@Html.Raw(item.Value("serviceItemDescription"))</p>
-                    </div>
+                    @await Html.PartialAsync("blocklist/Components/serviceCard", card)
                 }
             }
-        </div> *@
-  
+        </div>
+    </div>
     </section>
