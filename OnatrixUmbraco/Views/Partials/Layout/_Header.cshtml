@@ -1,0 +1,40 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+    var logo = siteSettings?.SiteLogo;
+}
+
+<header>
+    <nav class="nav-container container">
+        @if (logo != null)
+        {
+            <a class="logo" href="/">
+                <img src="@logo.Url()" alt="Onatrix" />
+            </a>
+        }
+        else {
+            <a class="logo" href="/">Onatrix</a>
+        }
+        <ul class="nav-list">
+            <li>
+                <a class="nav-link" href="/about">About</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/services">Services</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/projects">Projects</a>
+            </li>
+            <li>
+                <a class="nav-link" href="/contact">Contact</a>
+            </li>
+        </ul>
+
+        <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </nav>
+
+</header>
