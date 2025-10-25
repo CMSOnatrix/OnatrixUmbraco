@@ -15,27 +15,31 @@
     --font-black: 900;
     /*COLOR*/
     --white: #FFFFFF;
-    --background-grey: #F7F7F7;
+    --white-200: #F7F7F7;
     --black: #000000;
     --primary: #4F5955;
+    --primary-100: #606966;
     --secondary: #F2EDDC;
     --secondary-dark: #D9C3A9;
-    --grey-light: #9C9EA6;
-    --grey-dark: #535656;
+    --grey-100: #EBEBEB;
+    --grey-200: #9C9EA6;
+    --grey-400: #535656;
     /*BACKGROUND*/
     --background: var(--white);
-    --background-grey: var( --background-grey);
+    --background-light: var(--white-200);
+    --background-primary: var(--primary);
     /*TEXT*/
     --headline-color: var(--primary);
-    --text-body: var(--grey-dark);
-    --text-body-light: var(--grey-light);
+    --text-body: var(--grey-400);
+    --text-body-light: var(--grey-200);
     --text-secondary-dark: var(--secondary-dark);
     --text-white: var(--white);
     --text-secondary: var(--secondary);
-    
+    --social-link: var(--text-white);
     /*BORDER*/
+    --border-light-pr: var(--primary-100);
     /*BUTTONS*/
-    --button-dark: var(--grey-dark);
+    --button-dark: var(--grey-400);
 }
 
 html, body {
@@ -62,6 +66,11 @@ a {
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.container {
+    width: min(100% - 4rem, 1200px); 
+    margin-inline: auto; 
 }
 
 /*TYPOGAPHY*/
@@ -94,6 +103,10 @@ h4 {
     font-weight: var(--font-semibold);
 }
 
+a{
+    text-decoration: none;
+}
+
 .label {
     color: var(--text-secondary-dark);
     font-size: 14px;
@@ -102,8 +115,42 @@ h4 {
     padding: 0.5em;
 }
 
-/*HERO*/
+/*TOPBAR*/
+.topbar {
+    background: var(--background-primary);
+}
+.topbar-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 3rem;
+}
+.topbar-address {
+    color: var(--text-white);
+    font-size: 14px;
+}
 
+.social-container {
+    display: flex;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--social-link);
+    border-left: 0.8px solid var( --border-light-pr);
+}
+
+    .social-link:last-child {
+        border-right: 0.8px solid var( --border-light-pr);
+    }
+
+/*HERO*/
 .hero-section {
     position: relative;
     width: 100%;
