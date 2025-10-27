@@ -15,7 +15,6 @@
     --font-black: 900;
     /*LAYOUT*/
     --page-padding-inline: clamp(1rem, 12vw, 375px);
-  
     /*COLOR*/
     --white: #FFFFFF;
     --white-200: #F7F7F7;
@@ -43,6 +42,7 @@
     --border-light-pr: var(--primary-100);
     /*BUTTONS*/
     --button-dark: var(--grey-400);
+    --nav-hover: var(--secondary-dark);
 }
 
 html, body {
@@ -151,6 +151,13 @@ a{
         border-right: 0.8px solid var( --border-light-pr);
     }
 
+    .social-link i:hover {
+        
+        color: var(--nav-hover);
+        transition: color 0.3s ease;
+        cursor: pointer;
+    }
+
 /*HEADER*/
 header {
     position: relative;
@@ -176,9 +183,15 @@ header {
    
 }
 .nav-link:hover {
-    color: var(--secondary);
+    color: var(--nav-hover);
     transition: color 0.3s ease;
 }
+
+.current a {
+    color: var(--nav-hover);
+  
+}
+
 .search-icon {
     display: flex;
     align-items: center;
@@ -189,7 +202,7 @@ header {
         font-weight: var(--font-bold);
     }
         .search-icon i:hover {
-            color: var(--secondary);
+            color: var(--nav-hover);
             transition: color 0.3s ease;
             cursor: pointer;
         }
