@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ServiceSection)Model.Content;
+    var settings = Model.Settings as ContentModels.ServiceSettings; 
+    var sectionColor = settings?.ServiceBgColor?.Color ?? "#ffffff";
+}
+
+<section class="service-section" style="background-color:@sectionColor">
+    <div class="container">
+        <div class="service-header center-content">
+            @if(settings!.ShowServiceLabel)
+            {
+                <div class="service-label label">@content.ServiceLabel</div>
+            }
+
+            <div class="service-title">@Html.Raw(content.ServiceTitle)</div>
+        </div>
+        <div class="service-card-list">
+            @if (content.ServiceCardList != null)
+            {
+                foreach (var card in content.ServiceCardList)
+                {
+                    @await Html.PartialAsync("blocklist/Components/serviceCard", card)
+                }
+            }
+        </div>
+    </div>
+    </section>

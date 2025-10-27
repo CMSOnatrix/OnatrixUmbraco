@@ -1,0 +1,54 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+    var contactAddress = siteSettings?.ContactAddress ?? "";
+}
+
+
+<div class="topbar">
+    <div class="topbar-container container">
+        <div class="topbar-address">@contactAddress</div>
+
+       <div class="social-container">
+            @if(siteSettings?.PlatformList != null)
+            {
+                foreach (var item in siteSettings.PlatformList)
+                {
+                    if(item.Content is SocialMediaItem mediaItem)
+                    {
+                        switch (mediaItem.PlatformName!.ToLower())
+                        {
+                            case "facebook":
+                                <a class="social-link" href="@mediaItem.PlatformUrl" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                break;
+                            case "x":
+                                <a class="social-link" href="@mediaItem.PlatformUrl" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                                break;
+                            case "linkedin":
+                                <a class="social-link" href="@mediaItem.PlatformUrl" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                break;
+                            case "instagram":
+                                <a class="social-link" href="@mediaItem.PlatformUrl" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                                break;
+                            case "tiktok":
+                                <a class="social-link" href="@mediaItem.PlatformUrl" target="_blank" rel="noopener noreferrer">
+                                    <i class="fa-brands fa-tiktok"></i>
+                                </a>
+                                break;
+                        }
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>
