@@ -363,3 +363,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /OnatrixUmbraco/appsettings-schema.json
 /OnatrixUmbraco/appsettings.json
+/OnatrixUmbraco/appsettings.Development.json
