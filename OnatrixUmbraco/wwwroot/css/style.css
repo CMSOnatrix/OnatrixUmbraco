@@ -300,10 +300,37 @@ header {
    
 }
 
+/*SERVICE DETAIL SECTION*/
 
+.service-detail-container {
+    display: grid;
+    grid-template-columns: 1fr auto 2fr;
+    align-items: start;
+    gap: 2rem;
+   
+}
+
+aside {
+    display: grid;
+    padding: 4rem;
+
+}
+
+.divider {
+    border: 2px solid var(--border-cards);
+    height: 80%;
+    justify-self: center; 
+    align-self: center;
+}
+.info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+   
+}
 
 /*TEAM SECTION*/
-
 .member-header {
     padding-top: 4rem;
     flex-direction: column;

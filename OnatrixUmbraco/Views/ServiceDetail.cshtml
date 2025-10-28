@@ -1,5 +1,26 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ServiceDetail>;
 @{
-	Layout = null;
+	Layout = "mainLayout.cshtml";
 }
+
+<section class="service-detail-section">
+	<div class="container service-detail-container">
+
+       
+            @if (Model.ServiceDetailAsides != null && Model.ServiceDetailAsides.Any())
+            { <aside class="service-detail-aside">
+                @Html.GetBlockListHtml(Model.ServiceDetailAsides)  </aside>
+
+                <div class="divider"></div>
+            }
+            
+      
+		<div class="service-content">
+			CONTENT
+		</div>
+	
+    </div>
+</section>
+
+
