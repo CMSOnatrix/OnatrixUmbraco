@@ -278,16 +278,17 @@ padding: 2rem;
     display: flex;
     flex-direction: column;
     background: var(--background);
-    padding: 1rem;
+   border: 1px solid var(--border-cards);
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 .service-card p {
    color: var(--text-body);
+   font-size: 14px;
    padding: 1rem 2rem;
 }
     .service-card h4 {
         
-        padding-left:  1.5rem;
+        padding: 1.5rem;
     }
 .service-card-img {
     width: 100%;
