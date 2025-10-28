@@ -247,17 +247,19 @@ header {
 .hero-content {
     width: 50%;
     color: var(--text-body);
-    
+
 }
-.hero-button{
-padding: 2rem;
+
+.hero-text {
+   margin-bottom: 2rem;
 }
+
 .contact-button {
     background: var(--button-dark);
     padding: 0.5rem;
     color: var(--text-secondary);
     border-radius: 3px;
-    
+    margin-top: 2rem;
 }
 
 /*SERVICE SECTION*/
