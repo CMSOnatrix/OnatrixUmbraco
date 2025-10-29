@@ -1,0 +1,121 @@
+{
+  "name": "Onatrix Rte",
+  "alias": "Onatrix.Rte",
+  "extensions": [
+    {
+      "type": "tiptapToolbarExtension",
+      "kind": "styleMenu",
+      "alias": "Onatrix.Tiptap.StyleMenu",
+      "name": "Onatrix Tiptap Style Menu",
+      "meta": {
+        "alias": "OnatrixStyleMenu",
+        "icon": "icon-heading",
+        "label": "Onatrix Styles"
+      },
+      "items": [
+        {
+          "label": "Headings",
+          "items": [
+            {
+              "label": "Heading 2",
+              "data": { "tag": "h2" },
+              "appearance": { "icon": "icon-heading-2" }
+            },
+            {
+              "label": "Heading 3",
+              "data": { "tag": "h3" },
+              "appearance": { "icon": "icon-heading-3" }
+            },
+            {
+              "label": "Heading 4",
+              "data": { "tag": "h4" },
+              "appearance": { "icon": "icon-heading-4" }
+            },
+            {
+              "label": "Heading 5",
+              "data": { "tag": "h5" },
+              "appearance": { "icon": "icon-heading-5" }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "tiptapToolbarExtension",
+      "kind": "styleMenu",
+      "alias": "Onatrix.Tiptap.ColorMenu",
+      "name": "Onatrix Tiptap Color Menu",
+      "meta": {
+        "alias": "OnatrixColorMenu",
+        "icon": "icon-palette",
+        "label": "Onatrix Text Colors"
+      },
+      "items": [
+        {
+          "label": "Text Colors",
+          "items": [
+            {
+              "label": "Headline",
+              "data": {
+                "tag": "span",
+                "class": "text-headline"
+              },
+              "appearance": { "style": "color: #FFFFFF; background-color: #4F5955; padding: 2px 6px; border-radius: 4px;" }
+            },
+            {
+              "label": "Text Body",
+              "data": {
+                "tag": "span",
+                "class": "text-body"
+              },
+              "appearance": { "style": "color: #FFFFFF; background-color: #535656; padding: 2px 6px; border-radius: 4px;" }
+            },
+            {
+              "label": "Text Body Light",
+              "data": {
+                "tag": "span",
+                "class": "text-body-light"
+              },
+              "appearance": { "style": "color: #000000; background-color: #9C9EA6; padding: 2px 6px; border-radius: 4px;" }
+            },
+            {
+              "label": "Text Secondary Dark",
+              "data": {
+                "tag": "span",
+                "class": "text-secondary-dark"
+              },
+              "appearance": { "style": "color: #000000; background-color: #D9C3A9; padding: 2px 6px; border-radius: 4px;" }
+            },
+            {
+              "label": "Text Secondary",
+              "data": {
+                "tag": "span",
+                "class": "text-secondary",
+                "style": "color: #F2EDDC;" ///FRÅGA VARFÖR DET INTE FUNKAR SER EJ I RTE////
+              },
+              "appearance": { "style": "color: #000000; background-color: #F2EDDC; padding: 2px 6px; border-radius: 4px;" }
+            },
+            {
+              "label": "Text White",
+              "data": {
+                "tag": "span",
+                "class": "text-white"
+              },
+              "appearance": { "style": "color: #4F5955; background-color: #FFFFFF; padding: 2px 6px; border-radius: 4px; border: 1px solid #EAEAEA;" }
+            },
+            {
+              "label": "Social Link",
+              "data": {
+                "tag": "span",
+                "class": "text-social-link"
+              },
+              "appearance": { "style": "color: #FFFFFF; background-color: #9C9EA6; padding: 2px 6px; border-radius: 4px;" }
+            }
+          ]
+        }
+      ]
+    }
+
+
+  ]
+}
