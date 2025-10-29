@@ -21,6 +21,7 @@
     --white-200: #F7F7F7;
     --white-300: #EAEAEA;
     --black: #000000;
+    --black-footer: #0E0E0E;
     --primary: #4F5955;
     --primary-100: #606966;
     --secondary: #F2EDDC;
@@ -33,6 +34,7 @@
     --background-light: var(--white-200);
     --background-primary: var(--primary);
     --background-page-header: var(--white-200);
+    --background-footer: var(--black-footer);
     /*TEXT*/
     --headline-color: var(--primary);
     --text-body: var(--grey-400);
@@ -42,6 +44,7 @@
     --text-secondary: var(--secondary);
     --social-link: var(--text-white);
     --breadcrumb-text: var(--primary);
+    --text-footer: var(--primary);
     /*BORDER*/
     --border-cards: var(--white-300);
     --border-light-pr: var(--primary-100);
@@ -183,6 +186,17 @@ a{
         cursor: pointer;
     }
 
+/*FOOTER*/
+footer {
+    background: var(--background-footer);
+    padding: 1.5rem 0;
+    font-size: 14px;
+    color: var(--text-footer);
+}
+.footer-link {
+    color: var(--secondary-dark);
+    
+}
 /*HEADER*/
 header {
     position: relative;
@@ -446,7 +460,7 @@ header {
 
 .partner-logo-list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 4rem;
     padding: 4rem 0;
