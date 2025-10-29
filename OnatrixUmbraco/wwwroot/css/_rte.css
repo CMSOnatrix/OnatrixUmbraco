@@ -1,0 +1,39 @@
+﻿/*UMBRACO RTE  -kolla varför det inte fungerar i RTE*/
+
+.text-headline {
+    color: var(--headline-color) !important;
+    
+}
+
+.text-body {
+    color: var(--text-body) !important;
+}
+
+.text-body-light {
+    color: var(--text-body-light) !important;
+}
+
+.text-secondary-dark {
+    color: var(--text-secondary-dark) !important;
+}
+
+.text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+.text-white {
+    color: var(--text-white) !important;
+}
+
+.text-social-link {
+    color: var(--social-link) !important;
+}
+
+.rich-text p {
+    margin: 0;
+    padding: 0;
+}
+
+    .rich-text p + p {
+        margin-top: 1rem;
+    }
