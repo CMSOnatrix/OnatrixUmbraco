@@ -31,6 +31,7 @@
     --background: var(--white);
     --background-light: var(--white-200);
     --background-primary: var(--primary);
+    --background-page-header: var(--white-200);
     /*TEXT*/
     --headline-color: var(--primary);
     --text-body: var(--grey-400);
@@ -258,6 +259,38 @@ padding: 2rem;
     color: var(--text-secondary);
     border-radius: 3px;
     
+}
+
+
+
+/*PAGEHEADER*/
+.page-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* två bakgrundsbilder, en till vänster och en till höger */
+    background-image: url("../images/pageheader-left.svg"), url("../images/pageheader-right.svg");
+    background-position: left bottom, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    padding:3rem;
+    background-color: var(--background-page-header);
+}
+
+
+.page-header-content h2 {
+    
+    z-index: 2;
+}
+
+
+@media (max-width: 900px) {
+    .page-header {
+        background-image: none; 
+        padding: 3rem 1rem;
+    }
 }
 
 /*SERVICE SECTION*/
