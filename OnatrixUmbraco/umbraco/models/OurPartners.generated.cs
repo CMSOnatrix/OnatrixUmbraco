@@ -50,19 +50,27 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		// properties
 
 		///<summary>
-		/// Name
+		/// Partner Link
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("partnerName")]
-		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString PartnerName => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "partnerName");
+		[ImplementPropertyType("partnerLink")]
+		public virtual global::Umbraco.Cms.Core.Models.Link PartnerLink => this.Value<global::Umbraco.Cms.Core.Models.Link>(_publishedValueFallback, "partnerLink");
 
 		///<summary>
 		/// Logo
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("partnersLogo")]
-		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops PartnersLogo => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "partnersLogo");
+		[ImplementPropertyType("partnerLogo")]
+		public virtual global::Umbraco.Cms.Core.Models.MediaWithCrops PartnerLogo => this.Value<global::Umbraco.Cms.Core.Models.MediaWithCrops>(_publishedValueFallback, "partnerLogo");
+
+		///<summary>
+		/// Name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("partnerName")]
+		public virtual string PartnerName => this.Value<string>(_publishedValueFallback, "partnerName");
 	}
 }

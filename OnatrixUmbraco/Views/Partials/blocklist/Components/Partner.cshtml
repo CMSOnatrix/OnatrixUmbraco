@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.OurPartners)Model.Content;
+
+}
+
+<div class="partner-logo-item">
+    @if (content.PartnerLogo != null)
+    {
+        <a href="@content.PartnerLink" target="_blank" rel="noopener noreferrer">
+            <img class="partner-logo-img" src="@content.PartnerLogo.Url()" alt="@content.PartnerName" />
+        </a>
+    }
+</div>
