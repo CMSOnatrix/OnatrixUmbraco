@@ -31,6 +31,7 @@
     --background: var(--white);
     --background-light: var(--white-200);
     --background-primary: var(--primary);
+    --background-page-header: var(--white-200);
     /*TEXT*/
     --headline-color: var(--primary);
     --text-body: var(--grey-400);
@@ -39,6 +40,7 @@
     --text-white: var(--white);
     --text-secondary: var(--secondary);
     --social-link: var(--text-white);
+    --breadcrumb-text: var(--primary);
     /*BORDER*/
     --border-cards: var(--white-300);
     --border-light-pr: var(--primary-100);
@@ -271,6 +273,88 @@ header {
     border-radius: 3px;
     margin-top: 2rem;
 }
+
+
+
+/*PAGEHEADER*/
+.page-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("../images/pageheader-left.svg"), url("../images/pageheader-right.svg");
+    background-position: left bottom, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, contain;
+    padding:3rem;
+    background-color: var(--background-page-header);
+}
+
+.page-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; 
+}
+
+
+.bc-container {
+    display: flex;
+    justify-content: center;
+    align-content:center;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    .breadcrumb li {
+        display: flex;
+        align-items: center;
+       
+    }
+
+    .breadcrumb a {
+        color: var(--breadcrumb-text);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+        .breadcrumb a:hover {
+            color: var(--text-secondary-dark);
+        }
+
+    .breadcrumb .divider {
+        color: var(--breadcrumb-text);
+        font-size: 14px;
+        margin: 0.5rem;
+        font-weight: var(--font-regular);
+    }
+
+.bc-active {
+    color: var(--text-secondary-dark);
+   
+}
+
+
+@media (max-width: 768px) {
+    .page-header {
+        background-image: none;
+        padding: 2rem 1rem;
+    }
+
+    .breadcrumb {
+        flex-wrap: wrap;
+        font-size: 0.85rem;
+    }
+}
+
+
 
 /*SERVICE SECTION*/
 

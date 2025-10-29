@@ -1,4 +1,5 @@
 {
+ 
   "name": "Onatrix Rte",
   "alias": "Onatrix.Rte",
   "extensions": [
@@ -91,7 +92,7 @@
               "data": {
                 "tag": "span",
                 "class": "text-secondary",
-                "style": "color: #F2EDDC;" ///FRÅGA VARFÖR DET INTE FUNKAR SER EJ I RTE////
+                "style": "color: #F2EDDC;"
               },
               "appearance": { "style": "color: #000000; background-color: #F2EDDC; padding: 2px 6px; border-radius: 4px;" }
             },
