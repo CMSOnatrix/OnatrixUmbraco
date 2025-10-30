@@ -1,0 +1,41 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ReviewSection)Model.Content;
+    var settings = Model.Settings as ContentModels.ReviewSettings;
+    var sectionColor = settings?.BackgroundColor?.Color ?? "#ffffff";
+
+
+}
+
+
+<section class="review-section" style="background-color:@sectionColor;">
+    <div class="review-container @((!settings!.ShowImage || content.ReviewImage == null) ? "no-image" : "")">
+        
+            <div class="review-text container">
+
+               <div class="label"> @content.ReviewLabel</div>
+               <h2 class="review-title">@content.ReviewTitle</h2>
+
+                    <p class="review-body">@Html.Raw(content.ReviewText)</p>
+
+                @if (content.ReviewStarImage != null)
+                {
+                    <img class="star-img" src="@content.ReviewStarImage.Url()" alt="^@content.ReviewerName" />
+                }
+               
+                <p class="reviewer-name">@content.ReviewerName</p>
+                <em class="reviewer-source">@content.ReviewerSource</em>
+            </div>
+
+                @if (settings!.ShowImage && content.ReviewImage != null)
+                {
+                      if (content.ReviewImage != null)
+                      {
+                        <div class="review-image">
+                         <img class="reviewer-img" src="@content.ReviewImage.Url()" alt="@content.ReviewerName" />
+                        </div>
+                      }
+                }
+    </div>
+</section>
