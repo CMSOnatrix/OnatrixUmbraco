@@ -1,5 +1,4 @@
 {
- 
   "name": "Onatrix Rte",
   "alias": "Onatrix.Rte",
   "extensions": [
@@ -53,69 +52,69 @@
       },
       "items": [
         {
-          "label": "Text Colors",
-          "items": [
-            {
-              "label": "Headline",
-              "data": {
-                "tag": "span",
-                "class": "text-headline"
-              },
-              "appearance": { "style": "color: #FFFFFF; background-color: #4F5955; padding: 2px 6px; border-radius: 4px;" }
-            },
-            {
-              "label": "Text Body",
-              "data": {
-                "tag": "span",
-                "class": "text-body"
-              },
-              "appearance": { "style": "color: #FFFFFF; background-color: #535656; padding: 2px 6px; border-radius: 4px;" }
-            },
-            {
-              "label": "Text Body Light",
-              "data": {
-                "tag": "span",
-                "class": "text-body-light"
-              },
-              "appearance": { "style": "color: #000000; background-color: #9C9EA6; padding: 2px 6px; border-radius: 4px;" }
-            },
-            {
-              "label": "Text Secondary Dark",
-              "data": {
-                "tag": "span",
-                "class": "text-secondary-dark"
-              },
-              "appearance": { "style": "color: #000000; background-color: #D9C3A9; padding: 2px 6px; border-radius: 4px;" }
-            },
-            {
-              "label": "Text Secondary",
-              "data": {
-                "tag": "span",
-                "class": "text-secondary",
-                "style": "color: #F2EDDC;"
-              },
-              "appearance": { "style": "color: #000000; background-color: #F2EDDC; padding: 2px 6px; border-radius: 4px;" }
-            },
-            {
-              "label": "Text White",
-              "data": {
-                "tag": "span",
-                "class": "text-white"
-              },
-              "appearance": { "style": "color: #4F5955; background-color: #FFFFFF; padding: 2px 6px; border-radius: 4px; border: 1px solid #EAEAEA;" }
-            },
-            {
-              "label": "Social Link",
-              "data": {
-                "tag": "span",
-                "class": "text-social-link"
-              },
-              "appearance": { "style": "color: #FFFFFF; background-color: #9C9EA6; padding: 2px 6px; border-radius: 4px;" }
-            }
-          ]
+          "label": "Headline",
+          "data": {
+            
+            "class": "text-headline"
+          },
+          "appearance": {
+            "style": "color: #FFFFFF; background-color: #4F5955; padding: 2px 6px; border-radius: 4px;"
+          }
+        },
+        {
+          "label": "Text Body",
+          "data": {
+            "tag": "span",
+            "className": "text-body"
+          },
+          "appearance": {
+            "style": "color: #FFFFFF; background-color: #535656; padding: 2px 6px; border-radius: 4px;"
+          }
+        },
+        {
+          "label": "Text Body Light",
+          "data": {
+            "tag": "span",
+            "class": "text-body-light"
+          },
+          "appearance": {
+            "style": "color: #000000; background-color: #9C9EA6; padding: 2px 6px; border-radius: 4px;"
+          }
+        },
+        {
+          "label": "Text Secondary Dark",
+          "data": {
+            "tag": "span",
+            "class": "text-secondary-dark"
+          },
+          "appearance": {
+            "style": "color: #000000; background-color: #D9C3A9; padding: 2px 6px; border-radius: 4px;"
+          }
+        },
+        {
+          "label": "Text Secondary",
+          "data": {
+            "tag": "span",
+            "class": "text-secondary"
+           
+          },
+          "appearance": {
+            "style": "color: #000000; background-color: #F2EDDC; padding: 2px 6px; border-radius: 4px;"
+          }
+        },
+        {
+          "label": "Text White",
+          "data": {
+            "tag": "span",
+            "class": "text-white"
+          },
+          "appearance": {
+            "style": "color: #4F5955; background-color: #FFFFFF; padding: 2px 6px; border-radius: 4px; border: 1px solid #EAEAEA;"
+          }
         }
       ]
     }
+
 
 
   ]
