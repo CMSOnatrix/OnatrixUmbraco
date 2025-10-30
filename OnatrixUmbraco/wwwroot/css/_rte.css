@@ -25,9 +25,6 @@
     color: var(--text-white) !important;
 }
 
-.text-social-link {
-    color: var(--social-link) !important;
-}
 
 .rich-text p {
     margin: 0;

@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.AboutSection)Model.Content;
+
+}
+
+<section>
+    <div class="container">
+        <div class="about-content">
+            <div class="about-img">
+            @if (content.AboutImage != null)
+            {
+                <img class="member-card-img" src="@content.AboutImage.Url()" />
+               <p class="img-text">@content.AboutImageText</p>
+            }
+</div>
+
+            <div>@Html.Raw(content.AboutText)</div>
+        </div>
+    </div>
+</section>

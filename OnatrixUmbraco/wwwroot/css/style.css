@@ -37,6 +37,7 @@
     --background-footer: var(--black-footer);
     /*TEXT*/
     --headline-color: var(--primary);
+
     --text-body: var(--grey-400);
     --text-body-light: var(--grey-200);
     --text-secondary-dark: var(--secondary-dark);
@@ -419,150 +420,170 @@ header {
 }
 
 
-/*SERVICE SECTION*/
-.service-header {
-    padding-top: 4rem;
-    flex-direction: column;
-}
+/*ABOUT*/
 
-.service-card-list {
+.about-content {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    padding-block: 3rem;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    padding: 3rem 0;
+    align-content:center;
+}
+.about-content p {
+    font-size: 14px;
+    padding-top: 0.8rem;
 }
 
-.service-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--background);
-   border: 1px solid var(--border-cards);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+.img-text {
+    color: var(--primary) !important;
+    padding: 0 !important;
 }
-.service-card p {
-   color: var(--text-body);
-   font-size: 14px;
-   padding: 1rem 2rem;
-}
-    .service-card h4 {
-        
-        padding: 1.5rem;
+
+    /*SERVICE SECTION*/
+    .service-header {
+        padding-top: 4rem;
+        flex-direction: column;
     }
-.service-card-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    padding-top: 1rem;
-   
-}
 
-/*OUR PARTNERS*/
+    .service-card-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        padding-block: 3rem;
+    }
 
-.partner-logo-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4rem;
-    padding: 4rem 0;
-}
+    .service-card {
+        display: flex;
+        flex-direction: column;
+        background: var(--background);
+        border: 1px solid var(--border-cards);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
 
-/*SERVICE DETAIL SECTION*/
-.service-detail-container {
-    display: grid;
-    grid-template-columns: 1fr auto 2fr;
-    align-items: start;
-    gap: 2rem;
-    padding-top: 2rem;
-} 
+        .service-card p {
+            color: var(--text-body);
+            font-size: 14px;
+            padding: 1rem 2rem;
+        }
 
-.divider {
-    border: 1px solid var(--divider);
-    height: 100%;
-    justify-self: center; 
-    align-self: center;
-}
-.info-card {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
- 
-}
+        .service-card h4 {
+            padding: 1.5rem;
+        }
 
-.service-content h4 {
-    margin: 1rem 0;
-}
+    .service-card-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        padding-top: 1rem;
+    }
 
-.service-content img {
-   width: 100%;
-}
+    /*OUR PARTNERS*/
 
-li::marker {
-    color: var(--secondary-dark);
-}
-@media (max-width: 1024px) {
+    .partner-logo-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4rem;
+        padding: 4rem 0;
+    }
+
+    /*SERVICE DETAIL SECTION*/
     .service-detail-container {
-        grid-template-columns: 1fr; 
+        display: grid;
+        grid-template-columns: 1fr auto 2fr;
+        align-items: start;
+        gap: 2rem;
+        padding-top: 2rem;
     }
 
-    .service-detail-aside,
     .divider {
-        display: none; 
+        border: 1px solid var(--divider);
+        height: 100%;
+        justify-self: center;
+        align-self: center;
     }
 
-    .service-content {
-        padding: 1rem;
+    .info-card {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
-}
 
-/*TEAM SECTION*/
-.member-header {
-    padding-top: 4rem;
-    flex-direction: column;
-}
+    .service-content h4 {
+        margin: 1rem 0;
+    }
 
-.member-card-list {
-    display: grid;
-    gap: 1rem;
-    padding-block: 3rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    justify-content: center;
-}
+    .service-content img {
+        width: 100%;
+    }
 
+    li::marker {
+        color: var(--secondary-dark);
+    }
 
-@media (min-width: 1024px) {
+    @media (max-width: 1024px) {
+        .service-detail-container {
+            grid-template-columns: 1fr;
+        }
+
+        .service-detail-aside,
+        .divider {
+            display: none;
+        }
+
+        .service-content {
+            padding: 1rem;
+        }
+    }
+
+    /*TEAM SECTION*/
+    .member-header {
+        padding-top: 4rem;
+        flex-direction: column;
+    }
+
     .member-card-list {
-        grid-template-columns: repeat(12, 1fr); 
+        display: grid;
+        gap: 1rem;
+        padding-block: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        justify-content: center;
     }
 
-       
-        .member-card-list > * {
-            grid-column: span 3;
+
+    @media (min-width: 1024px) {
+        .member-card-list {
+            grid-template-columns: repeat(12, 1fr);
         }
 
-        .member-card-list > :nth-child(-n+3) {
-            grid-column: span 4;
-        }
-}
 
-.member-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--background);
-    border: 1px solid var(--border-cards);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
+            .member-card-list > * {
+                grid-column: span 3;
+            }
 
-.member-card-content {
-    padding: 2rem;
-}
-.member-card p {
-    font-size: 13px;
-     
-}
+            .member-card-list > :nth-child(-n+3) {
+                grid-column: span 4;
+            }
+    }
 
-.member-card-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-   
-}
+    .member-card {
+        display: flex;
+        flex-direction: column;
+        background: var(--background);
+        border: 1px solid var(--border-cards);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .member-card-content {
+        padding: 2rem;
+    }
+
+    .member-card p {
+        font-size: 13px;
+    }
+
+    .member-card-img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
