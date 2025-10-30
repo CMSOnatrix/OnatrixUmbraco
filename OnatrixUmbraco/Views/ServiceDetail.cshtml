@@ -4,23 +4,24 @@
 	Layout = "mainLayout.cshtml";
 }
 
+<partial name="Partials/Layout/_PageHeader" model="(IPageHeader)Model" />
+
 <section class="service-detail-section">
-	<div class="container service-detail-container">
-       
-            @if (Model.ServiceDetailAsides != null && Model.ServiceDetailAsides.Any())
-            { <aside class="service-detail-aside">
+    <div class="container service-detail-container @(Model.ServiceDetailAsides != null && Model.ServiceDetailAsides.Any() ? "has-aside" : "no-aside")">
+
+        @if (Model.ServiceDetailAsides != null && Model.ServiceDetailAsides.Any())
+        {
+            <aside class="service-detail-aside">
                 @Html.GetBlockListHtml(Model.ServiceDetailAsides)
             </aside>
-                <div class="divider"></div>
-            
-            }
-
+            <div class="divider"></div>
+        }
 
         <div class="service-content rich-text">
-            @Html.Raw(Model.ServiceDetailBody) 
-		</div>
-	
+            @Html.Raw(Model.ServiceDetailBody)
+        </div>
     </div>
 </section>
+
 
 

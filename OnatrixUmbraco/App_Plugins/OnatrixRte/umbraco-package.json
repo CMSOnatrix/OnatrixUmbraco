@@ -54,7 +54,7 @@
         {
           "label": "Headline",
           "data": {
-            
+            "tag": "span",
             "class": "text-headline"
           },
           "appearance": {
