@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.SuccessStat)Model.Content;
+    var settings = Model.Settings as ContentModels.SuccessStatSettings;
+
+    var numberColor = settings?.NumberColor?.Color ?? "#D9C3A9";
+
+}
+
+<div class="success-stat-item">
+    <div class="success-stat-number" style="color: @numberColor">
+        @content.StatNumber
+    </div>
+    <div class="success-stat-description">
+        @content.StatDescription
+    </div>
+</div>
