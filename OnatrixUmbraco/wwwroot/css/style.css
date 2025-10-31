@@ -394,7 +394,11 @@ header {
     background-size: contain;
     background-origin: content-box;
     background-clip: content-box;
-    padding: 2rem 4rem;
+    
+}
+
+.our-story-img {
+    display: block;
 }
 
 
@@ -402,9 +406,8 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     padding: 2rem 10rem;
-
 }
 @media (max-width: 768px) {
     .our-story-container {
@@ -521,14 +524,14 @@ header {
 
 .bg-container {
     position: relative;
-    z-index:0;/* referens för innehållet ovanpå */
+    z-index:0; 
 }
 
     .bg-container::before {
         content: "";
         position: absolute;
         inset: 0;
-        height: 75%;
+        height: 80%;
         background-color: var(--success-section-color);
         z-index: -1;
     }
@@ -557,7 +560,7 @@ header {
 
 .success-stat-list {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     justify-content: center;
     align-items: center;
@@ -574,6 +577,36 @@ header {
     font-size: 18px;
     font-weight: var(--font-semibold);
     color: var(--text-white) !important;
+}
+
+@media (max-width: 992px) {
+    .success-stat-list {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    
+}
+
+
+@media (max-width: 768px) {
+    .success-container {
+        background-image: none; 
+    }
+    .success-img{
+        display: none;;
+    }
+    .success-stat-number {
+        font-size: 60px;
+    }
+
+    .success-stat-description {
+        font-size: 16px;
+    }
+
+    .bg-container::before {
+        height: 100%;
+    }
 }
 
 /*SERVICE SECTION*/
@@ -625,6 +658,7 @@ header {
     }
 
     /*SERVICE DETAIL SECTION*/
+
 .service-detail-container {
     display: grid;
     align-items: start;
