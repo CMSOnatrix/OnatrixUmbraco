@@ -536,6 +536,7 @@ header {
 
 .success-container {
     display: flex;
+    gap: 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -545,11 +546,33 @@ header {
     background-size: contain;
     background-origin: content-box;
     background-clip: content-box;
+    padding-top: 3rem;
     position: relative;
     z-index: 1;
 }
 
 .success-title {
+    color: var(--text-white) !important;
+}
+
+.success-stat-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.success-stat-number {
+    font-size: 100px;
+    font-weight: var(--font-semibold);
+}
+
+.success-stat-description{
+    font-size: 18px;
+    font-weight: var(--font-semibold);
     color: var(--text-white) !important;
 }
 
