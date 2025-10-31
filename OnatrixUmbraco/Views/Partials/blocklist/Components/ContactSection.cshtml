@@ -1,19 +1,42 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
     var content = (ContentModels.ContactSection)Model.Content;
-
+   
+    var address = siteSettings?.ContactAddress?.ToString() ?? "Info will come";
+    var phone = siteSettings?.ContactPhone?.ToString() ?? "Info will come";
+    var email = siteSettings?.ContactEmail?.ToString() ?? "Info will come";
 }
 
 <section class="contact-section">
-    <div class="contact-container">
-        <div class="contact-header">
-            <h2 class="contact-title">@content.ContactTitle</h2>
-            @if (content.ContactImage != null)
-            {
+    <div class="container contact-container">
+        @if (content.ContactImage != null)
+        {
+            <div class="contact-image">
+                <img class="contact-img" src="@content.ContactImage.Url()" />
+            </div>
+        }
 
-                <img class="hero-img" src="@content.ContactImage.Url()" />
+        <div class="contact-content">
+            <h2 class="contact-title">@content.ContactTitle</h2>
+          
+        
+        <ul class="contact-list">
+            @if (!string.IsNullOrEmpty(address))
+            {
+               <li><i class="fa-solid fa-location-dot"></i><span>Our office</span> <p>@address</p></li>
             }
+            @if (!string.IsNullOrEmpty(phone))
+            {
+              <li><i class="fa-solid fa-phone"></i><span>Phone number:</span><p>@phone</p> </li>
+            }
+            @if (!string.IsNullOrEmpty(email))
+            {
+             <li><i class="fa-solid fa-envelope"></i> <span>E-mail address</span> <p>@email</p></li>
+            }
+        </ul>
         </div>
         </div>
       
