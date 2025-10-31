@@ -14,8 +14,9 @@
     <div class="container contact-container">
         @if (content.ContactImage != null)
         {
-
-            <img class="contact-img" src="@content.ContactImage.Url()" />
+            <div class="contact-image">
+                <img class="contact-img" src="@content.ContactImage.Url()" />
+            </div>
         }
 
         <div class="contact-content">
@@ -25,15 +26,15 @@
         <ul class="contact-list">
             @if (!string.IsNullOrEmpty(address))
             {
-                    <li><i class="fa-solid fa-location-dot"></i> <span>Our address:</span> <p>@address</p></li>
+               <li><i class="fa-solid fa-location-dot"></i><span>Our office</span> <p>@address</p></li>
             }
             @if (!string.IsNullOrEmpty(phone))
             {
-                    <li><i class="fa-solid fa-phone"></i><span>Phone:</span> @phone</li>
+              <li><i class="fa-solid fa-phone"></i><span>Phone number:</span><p>@phone</p> </li>
             }
             @if (!string.IsNullOrEmpty(email))
             {
-              <li><i class="fa-solid fa-envelope"></i> <span>Email:</span> <a href="@email">@email</a></li>
+             <li><i class="fa-solid fa-envelope"></i> <span>E-mail address</span> <p>@email</p></li>
             }
         </ul>
         </div>
