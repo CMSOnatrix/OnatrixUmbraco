@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.SuccessSection)Model.Content;
+    var settings = Model.Settings as ContentModels.SuccessSettings;
+    var sectionColor = settings?.SuccessBgColor?.Color ?? "#4F5955";
+    var successList = content.SuccessList;
+   
+}
+
+<section class="success-section">
+    <div class="bg-container" style="--success-section-color:@sectionColor">
+        <div class="container success-container">
+            <div class="label">@content.SuccessLabel</div>
+            <h2 class="success-title">@content.SuccessTitle</h2>
+
+            @if (successList != null)
+            {
+                <div class="success-stat-list">
+                    @foreach (var stat in successList)
+                    {
+                        <partial name="Partials/Blocklist/Components/SuccessStat" model="stat" />
+                    }
+                </div>
+            }
+
+            <div class="success-img @((!settings!.ShowImage || content.SuccessImage == null) ? "no-image" : "")">
+                @if (settings!.ShowImage && content.SuccessImage != null)
+                {
+                    <img class="success-image" src="@content.SuccessImage.Url()" alt="@content.SuccessTitle" />
+                }
+            </div>
+        </div>
+    </div>
+</section>
