@@ -379,8 +379,6 @@ header {
 
 /*OUR STORY SECTION*/
 
-
-
 .our-story-container {
     display: flex;
     justify-content: center;
@@ -515,8 +513,35 @@ header {
     text-align: center;
 }
 
-/*SUCCESS SECTION*/
 
+
+/*CONTACT US*/
+.contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.contact-list li {
+    list-style: none;
+}
+
+.contact-list i {
+    color: var(--secondary-dark);
+}
+/*SUCCESS SECTION*/
 .success-section {
     position: relative;
     background-color: var(--white);
