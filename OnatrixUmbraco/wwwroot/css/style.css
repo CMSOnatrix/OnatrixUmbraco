@@ -31,6 +31,7 @@
     --grey-200: #9C9EA6;
     --grey-400: #535656;
     --grey-500: #2D303A;
+    --red-error: #d9534f;
     /*BACKGROUND*/
     --background: var(--white);
     --background-light: var(--white-200);

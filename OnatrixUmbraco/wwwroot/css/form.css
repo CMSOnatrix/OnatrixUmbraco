@@ -104,6 +104,18 @@
         color: var(--primary);
     }
 
+.field-validation-error {
+    font-size: 14px;
+    color: var(--red-error);
+}
+
+input.input-validation-error,
+select.input-validation-error {
+    border-color: var(--red-error);
+    box-shadow: 0 0 0 3px rgba(217, 83, 79, 0.25);
+}
+
+
 .callback-submit-btn {
     width: 100%;
     max-width: 490px;
