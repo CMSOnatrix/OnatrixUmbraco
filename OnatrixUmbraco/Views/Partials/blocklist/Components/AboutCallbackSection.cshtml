@@ -5,3 +5,19 @@
     var settings = Model.Settings as ContentModels.AboutCallbackSettings;
 
 }
+
+<section>
+    <div class="container about-callback-container">
+        <div class="rte">
+            @Html.Raw(content.AboutCallbackBody)
+        </div>
+  
+
+    <div class="about-callback-form">
+        <div class="aboutform-header">
+            <h3 class="aboutform-title">@content.AboutCallbackFormTitle</h3>
+        </div>
+        <p class="aboutform-description">@content.AboutCallbackFormDescription</p>
+        </div>
+    </div>
+</section>

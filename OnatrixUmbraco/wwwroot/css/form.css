@@ -1,0 +1,22 @@
+﻿.about-callback-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+.about-callback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid var(--divider);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.aboutform-header {
+    background-color: var(--background-aboutform-header);
+    padding: 2rem 1rem;
+
+}
+
+.aboutform-title {
+    color: var(--text-secondary);
+}

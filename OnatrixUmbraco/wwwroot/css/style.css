@@ -1,5 +1,6 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url(./rte.css);
+@import url(./form.css);
 
 * {
     box-sizing: border-box;
@@ -35,6 +36,7 @@
     --background-light: var(--white-200);
     --background-primary: var(--primary);
     --background-page-header: var(--white-200);
+    --background-aboutform-header: var(--primary);
     --background-footer: var(--black-footer);
     /*TEXT*/
     --headline-color: var(--primary);
@@ -43,10 +45,12 @@
     --text-secondary: var(--secondary);
     --text-secondary-dark: var(--secondary-dark);
     --text-white: var(--white);
+
     --social-link: var(--text-white);
     --breadcrumb-text: var(--primary);
     --text-footer: var(--primary);
     --text-review: var(--grey-500);
+
     /*BORDER*/
     --border-cards: var(--white-300);
     --border-light-pr: var(--primary-100);
