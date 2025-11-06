@@ -1,0 +1,45 @@
+﻿@using OnatrixUmbraco.ViewModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.AboutCallbackSection)Model.Content;
+    var settings = Model.Settings as ContentModels.AboutCallbackSettings;
+
+    var formViewModel = new CallbackFormViewModel
+    {
+        Options = settings?.FormOptions ?? []
+    };
+}
+
+<section>
+    <div class="container about-callback-container">
+        <div class="rte about-callback-text">
+            @Html.Raw(content.AboutCallbackBody)
+            
+        </div>
+  
+
+    <div class="about-callback-form">
+        <div class="aboutform-header">
+            <h3 class="aboutform-title">@content.AboutCallbackFormTitle</h3>
+        </div>
+            <div class="message-container">
+                @if (TempData["FormSuccess"] != null)
+                {
+                    <div class="submit-confirmation">@TempData["FormSuccess"]</div>
+                }
+                else if(TempData["FormError"] != null)
+                {
+                    <div class="submit-error">@TempData["FormError"]</div>
+                }
+            </div>
+             <p class="aboutform-description">@content.AboutCallbackFormDescription</p>
+
+           <partial name="Partials/Forms/_CallbackForm" model="@formViewModel" />
+     
+        </div>
+    </div>
+
+</section>
+
+        
