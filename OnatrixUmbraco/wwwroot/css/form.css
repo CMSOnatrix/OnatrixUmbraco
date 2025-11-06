@@ -134,3 +134,25 @@ select.input-validation-error {
         background-color: var(--secondary-dark);
         box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
+
+
+.submit-confirmation {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    color: #1C6B2B;
+    background-color: #E9F9EE;
+}
+
+
+.submit-error {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    color: #5F2120;
+    background-color: #FCE8E6;
+}   

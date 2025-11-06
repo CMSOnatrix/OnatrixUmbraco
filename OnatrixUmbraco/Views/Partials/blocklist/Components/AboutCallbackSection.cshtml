@@ -17,6 +17,7 @@
     <div class="container about-callback-container">
         <div class="rte about-callback-text">
             @Html.Raw(content.AboutCallbackBody)
+            
         </div>
   
 
@@ -24,10 +25,24 @@
         <div class="aboutform-header">
             <h3 class="aboutform-title">@content.AboutCallbackFormTitle</h3>
         </div>
-        <p class="aboutform-description">@content.AboutCallbackFormDescription</p>
-            <partial name="Partials/Forms/_CallbackForm" model="@formViewModel" />
-        </div>
-       
+            <div class="message-container">
+                @if (TempData["FormSuccess"] != null)
+                {
+                    <div class="submit-confirmation">@TempData["FormSuccess"]</div>
+                }
+                else if(TempData["FormError"] != null)
+                {
+                    <div class="submit-error">@TempData["FormError"]</div>
+                }
+            </div>
 
+        <p class="aboutform-description">@content.AboutCallbackFormDescription</p>
+
+           <partial name="Partials/Forms/_CallbackForm" model="@formViewModel" />
+     
+        </div>
     </div>
+
 </section>
+
+        
