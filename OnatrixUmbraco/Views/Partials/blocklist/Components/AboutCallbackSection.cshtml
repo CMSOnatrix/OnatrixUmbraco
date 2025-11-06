@@ -5,8 +5,6 @@
     var content = (ContentModels.AboutCallbackSection)Model.Content;
     var settings = Model.Settings as ContentModels.AboutCallbackSettings;
 
-  
-
     var formViewModel = new CallbackFormViewModel
     {
         Options = settings?.FormOptions ?? []
@@ -35,8 +33,7 @@
                     <div class="submit-error">@TempData["FormError"]</div>
                 }
             </div>
-
-        <p class="aboutform-description">@content.AboutCallbackFormDescription</p>
+             <p class="aboutform-description">@content.AboutCallbackFormDescription</p>
 
            <partial name="Partials/Forms/_CallbackForm" model="@formViewModel" />
      
