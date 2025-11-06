@@ -35,6 +35,13 @@
               "label": "Heading 5",
               "data": { "tag": "h5" },
               "appearance": { "icon": "icon-heading-5" }
+            },
+            {
+              "label": "LABEL",
+              "data": { "class": "label" },
+              "appearance": {
+                "style": "color: #000000; background-color: #D9C3A9; padding: 2px 6px; border-radius: 4px;"
+              }
             }
           ]
         }

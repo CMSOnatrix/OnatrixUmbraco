@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\js\formValidation.js" />
+    <None Include="wwwroot\js\form.js" />
   </ItemGroup>
 
   <PropertyGroup>

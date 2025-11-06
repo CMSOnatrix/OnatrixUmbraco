@@ -46,6 +46,27 @@ window.initValidation = () => {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
+ 
     window.initValidation();
 
+    const form = document.getElementById("callbackForm");
+
+    if (form) {
+        form.addEventListener("submit", function () {
+            localStorage.setItem("scrollPosition", window.scrollY);
+        });
+    }
+
+  
+    window.addEventListener("load", function () {
+        const scrollPos = localStorage.getItem("scrollPosition");
+        if (scrollPos) {
+            window.scrollTo({
+                top: parseInt(scrollPos),
+                behavior: "instant" 
+            });
+            localStorage.removeItem("scrollPosition");
+        }
+    });
 });
+

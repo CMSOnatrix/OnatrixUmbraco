@@ -3,7 +3,7 @@
 @{
     var rootContent = Umbraco.ContentAtRoot();
     var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
-    var contactSetting = rootContent.OfType<ContactSettings>().FirstOrDefault();
+    var contactSetting = Model.Settings as ContentModels.ContactSettings;
     var content = (ContentModels.ContactSection)Model.Content;
    
     var sectionColor = contactSetting?.ContactBgColor?.Color ?? "#ffffff";
