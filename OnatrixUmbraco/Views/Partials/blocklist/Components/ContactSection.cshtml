@@ -3,14 +3,17 @@
 @{
     var rootContent = Umbraco.ContentAtRoot();
     var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+    var contactSetting = rootContent.OfType<ContactSettings>().FirstOrDefault();
     var content = (ContentModels.ContactSection)Model.Content;
    
+    var sectionColor = contactSetting?.ContactBgColor?.Color ?? "#ffffff";
+
     var address = siteSettings?.ContactAddress?.ToString() ?? "Info will come";
     var phone = siteSettings?.ContactPhone?.ToString() ?? "Info will come";
     var email = siteSettings?.ContactEmail?.ToString() ?? "Info will come";
 }
 
-<section class="contact-section">
+<section class="contact-section" style="background-color:@sectionColor">
     <div class="container contact-container">
         @if (content.ContactImage != null)
         {
