@@ -1,0 +1,45 @@
+﻿@using OnatrixUmbraco.ViewModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ContactCallbackSection)Model.Content;
+    var settings = Model.Settings as ContentModels.ContactCallbackSettings;
+    
+    var background = content.ContactCallbackBgImage != null && settings?.ShowBgImage == true
+     ? $"background-image: url('{content.ContactCallbackBgImage.Url()}'); background-size: cover; background-position: center;"
+     : "background-color: #F7F7F7;";
+
+   
+
+    var formViewModel = new CallbackFormViewModel
+    {
+        Options = settings?.Options ?? []
+    };
+}
+
+<section class="contact-callback-section">
+    <div class="contact-callback-bg" style="@background">
+        <div class="container contact-callback-container">
+            <div class="callback-content-box">
+                <div class="rte contact-callback-text">
+                    @Html.Raw(content.ContactCallbackBody)
+                </div>
+
+                <div class="message-container">
+                    @if (TempData["FormSuccess"] != null)
+                    {
+                        <div class="submit-confirmation">@TempData["FormSuccess"]</div>
+                    }
+                    else if (TempData["FormError"] != null)
+                    {
+                        <div class="submit-error">@TempData["FormError"]</div>
+                    }
+                </div>
+
+                <div class="callback-form-container callback-form--two-columns">
+                    <partial name="Partials/Forms/_CallbackForm" model="@formViewModel" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

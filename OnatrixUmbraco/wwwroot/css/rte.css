@@ -1,8 +1,38 @@
 ﻿/*UMBRACO RTE  -kolla varför det inte fungerar i RTE*/
 
+
+
+
+p {
+    margin: 0;
+    color: #9C9EA6;
+}
+
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
 .text-headline {
     color: #4F5955;
-   
 }
 
 .text-body {
@@ -25,6 +55,13 @@
     color: #FFFFFF;
 }
 
+.label {
+    color: #D9C3A9;
+    font-size: 14px;
+    font-weight: 700;
+    justify-content: center;
+    padding: 0.5em;
+}
 
 .rich-text p {
     margin: 0;
@@ -34,7 +71,6 @@
     .rich-text p + p {
         margin-top: 1rem;
     }
-
 
 .rte {
     display: flex;
