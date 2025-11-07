@@ -556,6 +556,7 @@ header {
 .contact-img {
     position: relative;
     right: 0;
+   
     width: 100%;
     z-index: 1;
 }
@@ -575,10 +576,11 @@ header {
     .contact-list p {
         padding-top: 0.5rem;
     }
-    .contact-list li, ul {
+    .contact-list,
+    .contact-list ul,
+    .contact-list li {
         list-style: none;
-        padding:0;
-    
+        padding: 0;
     }
     .contact-list i {
         display: inline-block;
