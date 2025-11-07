@@ -1,4 +1,5 @@
 ﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using OnatrixUmbraco.ViewModels
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
     var content = (ContentModels.QuestionFormSection)Model.Content;
@@ -10,5 +11,17 @@
         <h5>
             @content.QuestionFormTitle
         </h5>
+        <div class="message-container">
+            @if (TempData["QuestionFormSuccess"] != null)
+            {
+                <div class="submit-confirmation">@TempData["QuestionFormSuccess"]</div>
+            }
+            else if (TempData["QuestionFormError"] != null)
+            {
+                <div class="submit-error">@TempData["QuestionFormError"]</div>
+            }
+        </div>
+        <partial name="Partials/Forms/_QuestionForm" model="new QuestionFormViewModel()" />
+
     </div>
 </section>
