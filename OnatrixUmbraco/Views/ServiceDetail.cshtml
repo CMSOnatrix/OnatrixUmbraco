@@ -12,6 +12,7 @@
         @if (Model.ServiceDetailAsides != null && Model.ServiceDetailAsides.Any())
         {
             <aside class="service-detail-aside">
+
                 @Html.GetBlockListHtml(Model.ServiceDetailAsides)
             </aside>
             <div class="divider"></div>

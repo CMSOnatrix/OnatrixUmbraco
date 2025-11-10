@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var contactCardSetting = Model.Settings as ContentModels.ContactCardSettings;
+    var content = (ContentModels.ContactCard)Model.Content;
+
+    var cardBgColor = contactCardSetting?.ContactCardBgColor?.Color ?? "#4F5955";
+
+}
+
+<div class="contact-card" style="background-color:@cardBgColor">
+    <h4>@content.CardTitle</h4>
+    <p>@content.CardDescription</p>
+    <div class="form-group form-group-callback">
+        <input type="text" placeholder="Email" />
+    </div>
+</div>

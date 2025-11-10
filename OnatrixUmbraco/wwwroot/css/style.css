@@ -229,13 +229,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   padding-block: 2rem;
+    padding-block: 2rem;
 }
 
 .nav-list {
     display: flex;
     justify-items: center;
-    gap: 10rem;
+    gap: 5rem;
     list-style: none;
 }
 .nav-link {
@@ -939,6 +939,7 @@ header {
         grid-template-columns: 1fr;
     }
 
+
 .divider {
     border: 1px solid var(--divider);
     height: 100%;
@@ -951,11 +952,22 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-bottom: 3rem;
 }
 
-.service-content h4 {
-    margin: 1rem 0;
+.contact-card {
+   display:flex;
+   gap: 2rem;
+   padding: 2rem;
 }
+.contact-card h4, .contact-card p {
+    color: var(--text-secondary) !important;
+}
+
+
+    .service-content h4 {
+        margin: 1rem 0;
+    }
 
 .service-content img {
     width: 100%;
