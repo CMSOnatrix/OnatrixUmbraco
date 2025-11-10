@@ -60,15 +60,14 @@
     color: var(--nav-hover);
 }
 
-@media (width >= 768px) {
+@media (width >= 992px) {
 
     .nav-container {
-    
-     padding-block: 2rem;
+        padding-block: 2rem;
     }
 
     .nav-toggle {
-        display:none;
+        display: none;
     }
 
 
@@ -100,5 +99,4 @@
                 transition: color 0.3s ease;
                 cursor: pointer;
             }
-
 }

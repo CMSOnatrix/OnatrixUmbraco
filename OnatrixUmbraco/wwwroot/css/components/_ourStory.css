@@ -27,7 +27,7 @@
 @media (width >= 768px) {
     .our-story-container {
         flex-direction: row;
-        background-image: url("../images/dot-map-our-story.svg");
+        background-image: url("../../images/dot-map-our-story.svg");
         background-position: center top;
         background-repeat: no-repeat;
         background-size: contain;

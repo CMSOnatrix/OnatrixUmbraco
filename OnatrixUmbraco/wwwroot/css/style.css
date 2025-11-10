@@ -8,6 +8,8 @@
 @import url(./components/_forms.css);
 @import url(./components/_ourStory.css);
 @import url(./components/_ourSuccess.css);
+@import url(./components/_partners.css);
+
 * {
     box-sizing: border-box;
 }
@@ -424,97 +426,6 @@ a{
 
 
 
-/*SUCCESS SECTION*/
-/*.success-section {
-    position: relative;
-    background-color: var(--white);
-}
-
-.bg-container {
-    position: relative;
-    z-index:0; 
-}
-
-    .bg-container::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        height: 80%;
-        background-color: var(--success-section-color);
-        z-index: -1;
-    }
-
-
-.success-container {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url("../images/success-bg.svg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-origin: content-box;
-    background-clip: content-box;
-    padding-top: 3rem;
-    position: relative;
-    z-index: 1;
-}
-
-.success-title {
-    color: var(--text-white) !important;
-}
-
-.success-stat-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-.success-stat-number {
-    font-size: 100px;
-    font-weight: var(--font-semibold);
-}
-
-.success-stat-description{
-    font-size: 18px;
-    font-weight: var(--font-semibold);
-    color: var(--text-white) !important;
-}
-
-@media (max-width: 992px) {
-    .success-stat-list {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-}
-
-
-@media (max-width: 768px) {
-    .success-container {
-       background-image: none; 
-    }
-    .success-img{
-        display: none;
-    }
-    .success-stat-number {
-        font-size: 60px;
-    }
-
-    .success-stat-description {
-        font-size: 16px;
-    }
-
-    .bg-container::before {
-        height: 100%;
-    }
-}*/
 
 /*SERVICE SECTION*/
 .service-header {
@@ -554,15 +465,6 @@ a{
         padding-top: 1rem;
     }
 
-    /*OUR PARTNERS*/
-
-    .partner-logo-list {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 4rem;
-        padding: 4rem 0;
-    }
 
     /*SERVICE DETAIL SECTION*/
 

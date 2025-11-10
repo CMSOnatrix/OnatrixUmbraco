@@ -1,0 +1,34 @@
+﻿.partner-logo-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    padding: 2rem;
+}
+
+
+
+@media(width >= 768px) {
+    .partner-logo-list {
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+    }
+ 
+}
+
+@media(width >= 1200px) {
+    .partner-logo-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4rem 0;
+    }
+    .partner-logo-item {
+        display: grid;
+        object-position: center;
+    }
+}
