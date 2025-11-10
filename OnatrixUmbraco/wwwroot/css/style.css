@@ -1,7 +1,9 @@
 ﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url(./rte.css);
 @import url(./form.css);
+@import url(layout/_topbar.css);
 @import url(./layout/_header.css);
+@import url(./layout/_pageHeader.css);
 @import url(./layout/_footer.css);
 @import url(./components/_hero.css);
 
@@ -172,90 +174,6 @@ a{
         cursor: pointer;
     }
 
-
-
-
-
-
-
-
-/*PAGEHEADER*/
-.page-header {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: url("../images/pageheader-left.svg"), url("../images/pageheader-right.svg");
-    background-position: left bottom, right top;
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain, contain;
-    padding:3rem;
-    background-color: var(--background-page-header);
-}
-
-.page-header-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem; 
-}
-
-
-.bc-container {
-    display: flex;
-    justify-content: center;
-    align-content:center;
-}
-
-.breadcrumb {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-    .breadcrumb li {
-        display: flex;
-        align-items: center;
-       
-    }
-
-    .breadcrumb a {
-        color: var(--breadcrumb-text);
-        text-decoration: none;
-        transition: color 0.2s ease;
-    }
-
-        .breadcrumb a:hover {
-            color: var(--text-secondary-dark);
-        }
-
-    .chevron {
-        color: var(--breadcrumb-text);
-        font-size: 14px;
-        margin: 0.5rem;
-        font-weight: var(--font-regular);
-    }
-
-.bc-active {
-    color: var(--text-secondary-dark);
-   
-}
-
-
-@media (max-width: 768px) {
-    .page-header {
-        background-image: none;
-        padding: 2rem 1rem;
-    }
-
-    .breadcrumb {
-        flex-wrap: wrap;
-        font-size: 0.85rem;
-    }
-}
 
 /*OUR STORY SECTION*/
 
