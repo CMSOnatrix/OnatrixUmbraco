@@ -939,6 +939,7 @@ header {
         grid-template-columns: 1fr;
     }
 
+
 .divider {
     border: 1px solid var(--divider);
     height: 100%;
@@ -951,11 +952,22 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-bottom: 3rem;
 }
 
-.service-content h4 {
-    margin: 1rem 0;
+.contact-card {
+   display:flex;
+   gap: 2rem;
+   padding: 2rem;
 }
+.contact-card h4, .contact-card p {
+    color: var(--text-secondary) !important;
+}
+
+
+    .service-content h4 {
+        margin: 1rem 0;
+    }
 
 .service-content img {
     width: 100%;
