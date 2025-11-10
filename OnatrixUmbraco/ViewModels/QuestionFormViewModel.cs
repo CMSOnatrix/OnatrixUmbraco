@@ -14,6 +14,6 @@ public class QuestionFormViewModel
     public string Email { get; set; } = null!;
 
     [Required(ErrorMessage = "Please enter your question")]
-    [Display(Name = "Question")]
-    public string Question { get; set; } = null!;
+    [Display(Name = "Message")]
+    public string Message { get; set; } = null!;
 }

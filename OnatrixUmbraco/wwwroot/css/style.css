@@ -59,10 +59,9 @@
     --divider: var(--white-300);
     /*BUTTONS*/
     --button-dark: var(--grey-400);
+    --button-dark-hover: var( --primary-100);
     --nav-hover: var(--secondary-dark);
 }
-
-
 
 
 html, body {
@@ -152,6 +151,7 @@ a{
     font-weight: var(--font-bold);
     justify-content: center;
     padding: 0.5em;
+   
 }
 
 .button {
@@ -160,7 +160,15 @@ a{
     color: var(--text-secondary);
     border-radius: 3px;
     margin-top: 2rem;
+    border: none;
 }
+    .button:hover {
+        background-color: var(--button-dark-hover);
+        box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+        cursor: pointer;
+    }
+
+
 /*TOPBAR*/
 .topbar {
     background: var(--background-primary);
@@ -299,15 +307,6 @@ header {
 .hero-text {
    margin-bottom: 2rem;
 }
-
-.contact-button {
-    background: var(--button-dark);
-    padding: 0.5rem;
-    color: var(--text-secondary);
-    border-radius: 3px;
-    margin-top: 2rem;
-}
-
 
 
 /*PAGEHEADER*/
