@@ -3,7 +3,8 @@
 }
 
 /*  TABLET  */
-@media (min-width: 768px) {
+@media (width >= 768px) {
+
     .hero-section {
         display: block;
         position: relative;
@@ -16,10 +17,6 @@
         width: 100%;
     }
 
-    .hero-img {
-        display: none;
-    }
-
     .hero-container {
         position: absolute;
         inset: 0;
@@ -30,9 +27,19 @@
         z-index: 10;
     }
 
+    .hero-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+        object-position: center right;
+    }
+
     .hero-content {
         color: var(--text-body);
+        width: 50%;
     }
+
 
     .hero-title {
         font-size: 22px;
@@ -45,17 +52,20 @@
 }
 
 /* DESKTOP  */
-@media (min-width: 1400px) {
+@media (width >= 1400px) {
+
     .hero-title {
         font-size: 70px;
         font-weight: var(--font-bold);
     }
 
-    .hero-img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: contain;
-        object-position: center right;
-    }
 }
+
+
+
+
+
+
+
+
+

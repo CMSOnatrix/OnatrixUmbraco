@@ -13,8 +13,6 @@
     
 *@
 
-
-
 @{
     var rootContent = Umbraco.ContentAtRoot();
     var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
@@ -36,6 +34,10 @@
             <a class="logo" href="/">Onatrix</a>
         }
 
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
         @if (selection?.Length > 0)
         {
             <ul class="nav-list">
@@ -54,3 +56,5 @@
     </nav>
 
 </header>
+
+
