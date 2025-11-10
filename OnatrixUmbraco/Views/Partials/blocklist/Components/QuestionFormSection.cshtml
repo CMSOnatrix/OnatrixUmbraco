@@ -5,12 +5,12 @@
     var content = (ContentModels.QuestionFormSection)Model.Content;
 
 }
-
+                                    @* Fortsätt med styling av form i service *@
 <section>
     <div class="container">
-        <h5>
-            @content.QuestionFormTitle
-        </h5>
+        <div class="question-form-container">
+            <h5>@content.QuestionFormTitle</h5>
+            
         <div class="message-container">
             @if (TempData["QuestionFormSuccess"] != null)
             {
@@ -22,6 +22,6 @@
             }
         </div>
         <partial name="Partials/Forms/_QuestionForm" model="new QuestionFormViewModel()" />
-
+        </div>
     </div>
 </section>

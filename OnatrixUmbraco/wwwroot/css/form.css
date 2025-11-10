@@ -1,4 +1,6 @@
-﻿.about-callback-container {
+﻿/*CALLBACK FORM*/
+
+.about-callback-container {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 2rem;
@@ -12,17 +14,14 @@
 }
 
 .about-callback-form {
-    
     display: flex;
     flex-direction: column;
-    
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     background-color: var(--white);
     margin-top: -4rem;
     position:relative;
     z-index: 10;
 }
-
 
 .aboutform-header {
     background-color: var(--background-aboutform-header);
@@ -48,12 +47,11 @@
     background-color: var(--white);
 }
 
-.form-group {
-    width: 100%;
+.form-group-callback{
     max-width: 490px;
 }
 
-    .form-group input,
+  .form-group input,
     .callback-select {
         width: 100%;
         height: 51px;
@@ -104,17 +102,6 @@
         color: var(--primary);
     }
 
-.field-validation-error {
-    font-size: 14px;
-    color: var(--red-error);
-}
-
-input.input-validation-error,
-select.input-validation-error {
-    border-color: var(--red-error);
-    box-shadow: 0 0 0 3px rgba(217, 83, 79, 0.25);
-}
-
 
 .callback-submit-btn {
     width: 100%;
@@ -134,6 +121,75 @@ select.input-validation-error {
         background-color: var(--secondary-dark);
         box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
+
+
+/*QUESTION FORM */
+
+.question-form-container {
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+    margin-top:1rem;
+    margin-bottom:1rem;
+   
+}
+
+.question-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "name email" "message message";
+    gap: 1rem;
+}
+
+.form-group.name {
+    grid-area: name;
+}
+
+.form-group.email {
+    grid-area: email;
+}
+
+.form-group.message {
+    grid-area: message;
+}
+
+.question-inputs .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.question-inputs .message textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 1rem;
+    border: 1px solid var(--border-form-input);
+    border-radius: 4px;
+    font-family: var(--font-standard);
+    color: var(--text-placeholder);
+    resize: vertical;
+    line-height: 1.4;
+}
+
+.question-btn{
+    font-weight: var(--font-bold);
+    padding: 1rem 2.5rem !important;
+    font-size: 16px;
+}
+.form-group {
+    width: 100%;
+    
+}
+
+.field-validation-error {
+    font-size: 14px;
+    color: var(--red-error);
+}
+
+input.input-validation-error,
+select.input-validation-error {
+    border-color: var(--red-error);
+    box-shadow: 0 0 0 3px rgba(217, 83, 79, 0.25);
+}
 
 
 .submit-confirmation {
