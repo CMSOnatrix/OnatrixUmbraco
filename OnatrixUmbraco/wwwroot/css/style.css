@@ -229,13 +229,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   padding-block: 2rem;
+    padding-block: 2rem;
 }
 
 .nav-list {
     display: flex;
     justify-items: center;
-    gap: 10rem;
+    gap: 5rem;
     list-style: none;
 }
 .nav-link {
