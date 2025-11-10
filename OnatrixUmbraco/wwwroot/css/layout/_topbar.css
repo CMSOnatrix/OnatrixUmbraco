@@ -1,0 +1,39 @@
+﻿/*TOPBAR*/
+.topbar {
+    background: var(--background-primary);
+}
+
+.topbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3rem;
+}
+
+.topbar-address {
+    color: var(--text-white);
+    font-size: 13px;
+}
+
+.social-container {
+    display: flex;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: var(--social-link);
+    border-left: 0.8px solid var( --border-light-pr);
+}
+
+    .social-link:last-child {
+        border-right: 0.8px solid var( --border-light-pr);
+    }
+
+    .social-link i:hover {
+        color: var(--nav-hover);
+        transition: color 0.3s ease;
+        cursor: pointer;
+    }
