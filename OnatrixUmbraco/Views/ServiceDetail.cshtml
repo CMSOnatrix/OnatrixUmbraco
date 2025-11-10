@@ -20,7 +20,9 @@
         <div class="service-content rich-text">
             @Html.Raw(Model.ServiceDetailBody)
         </div>
+        
     </div>
+    @Html.GetBlockListHtml(Model.ServiceDetailSections)
 </section>
 
 
