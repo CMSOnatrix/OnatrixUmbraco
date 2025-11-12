@@ -18,7 +18,7 @@
 .about-callback-form {
     order: 2;
     width: 100%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.20);
     background-color: var(--white);
     position: relative;
     z-index: 10;
@@ -55,8 +55,6 @@
     align-items: center;
     background-color: var(--white);
 }
-
-
 
 .form-group input,
 .callback-select {
@@ -131,9 +129,9 @@
 @media(width >= 768px) {
 .about-callback-container {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    margin: 1rem;
+    margin: 2rem;
 }
 
 .about-callback-form {  
@@ -143,6 +141,18 @@
         max-width: 490px;
     }
 
+}
+@media(width >= 1280px) {
+    .about-callback-container {
+   
+        grid-template-columns: 1.5fr 1fr;
+       
+    }
+
+   
+    .form-group-callback {
+        max-width: 490px;
+    }
 }
 
 

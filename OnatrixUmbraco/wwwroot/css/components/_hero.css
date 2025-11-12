@@ -9,7 +9,7 @@
         display: block;
         position: relative;
         width: 100%;
-        overflow: hidden;
+     
     }
 
     .hero-img-container {
@@ -38,6 +38,7 @@
     .hero-content {
         color: var(--text-body);
         width: 50%;
+        padding-top:1rem;
     }
 
 
