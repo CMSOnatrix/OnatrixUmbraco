@@ -2,7 +2,7 @@
     display: none;
 }
 
-/*  TABLET  */
+
 @media (width >= 768px) {
 
     .hero-section {
@@ -52,7 +52,7 @@
     }
 }
 
-/* DESKTOP  */
+
 @media (width >= 1400px) {
 
     .hero-title {
