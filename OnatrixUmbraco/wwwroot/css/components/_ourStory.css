@@ -1,0 +1,46 @@
+﻿
+.our-story-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 1000px;
+    margin-inline: auto;
+    padding: 1rem;
+    background: none;
+}
+
+.our-story-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.our-story-img {
+    display: none;
+}
+
+
+@media (width >= 768px) {
+    .our-story-container {
+        flex-direction: row;
+        background-image: url("../../images/dot-map-our-story.svg");
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-origin: content-box;
+        background-clip: content-box;
+        padding: 0;
+    }
+
+    .our-story-text {
+        padding: 2rem 10rem;
+    }
+
+    .our-story-img {
+        display: block;
+    }
+}

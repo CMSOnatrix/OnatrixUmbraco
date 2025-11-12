@@ -1,0 +1,10 @@
+﻿footer {
+    background: var(--background-footer);
+    padding: 1.5rem 0;
+    font-size: 14px;
+    color: var(--text-footer);
+}
+
+.footer-link {
+    color: var(--secondary-dark);
+}

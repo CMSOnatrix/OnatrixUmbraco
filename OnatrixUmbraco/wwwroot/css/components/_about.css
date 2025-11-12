@@ -1,0 +1,28 @@
+﻿.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0;
+    align-content: center;
+}
+
+    .about-content p {
+        font-size: 14px;
+        padding-top: 0.8rem;
+    }
+
+.img-text {
+    color: var(--primary) !important;
+    padding: 0 !important;
+}
+
+@media (width >= 768px) {
+    .about-content {
+        grid-template-columns: 1fr 2fr;
+        gap: 3rem;
+       
+    }
+    .about-content p {
+        font-size: 16px;
+    }
+}

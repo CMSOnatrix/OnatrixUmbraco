@@ -1,0 +1,170 @@
+﻿/*CONTACT SECTION*/
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.contact-image {
+    background: none; 
+}
+
+.contact-img {
+    display: none; 
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+    .contact-list span {
+        color: var(--headline-color);
+        font-weight: var(--font-semibold);
+    }
+
+    .contact-list p {
+        padding-top: 0.5rem;
+    }
+
+    .contact-list,
+    .contact-list ul,
+    .contact-list li {
+        list-style: none;
+        padding: 0;
+    }
+
+        .contact-list i {
+            display: inline-block;
+            padding-right: 1.5rem;
+            color: var(--secondary-dark);
+        }
+
+@media (width >= 768px) {
+    .contact-img {
+        display: block; 
+        width: 100%;
+        position: relative;
+        right: 0;
+        z-index: 1;
+    }
+}
+
+@media (width >= 992px) {
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .contact-image {
+        position: relative;
+        background-image: url("../../images/Bg-contact.svg"), url("../../images/Dot-bg-contact.svg");
+        background-position: bottom, right top;
+        background-repeat: no-repeat, no-repeat;
+        background-size: contain, contain;
+    }
+}
+
+/* CONTACT CALLBACK-FORM*/
+
+.contact-callback-section {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    padding-bottom: 6rem;
+    margin: 2rem 0;
+}
+
+.contact-callback-bg {
+    position: relative;
+    height: auto; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-callback-container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.callback-content-box {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-top: 2rem; 
+}
+
+.contact-callback-text {
+    margin-bottom: 1rem;
+    color: var(--text-body, #333);
+}
+
+
+.callback-form--two-columns .callback-inputs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem 2rem;
+    justify-items: center;
+}
+
+.callback-form--two-columns .select-drop {
+    width: 100%;
+}
+
+.callback-form--two-columns .callback-submit-btn,
+.callback-form--two-columns textarea {
+    grid-column: 1 / -1;
+}
+
+
+@media (width >= 768px) {
+    .contact-callback-bg {
+        height: 85vh;
+    }
+
+    .contact-callback-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+    }
+
+    .callback-content-box {
+        position: absolute;
+        bottom: -4rem;
+        margin-top: 0;
+    }
+
+    .callback-form--two-columns .callback-inputs {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (width >= 992px) {
+    .callback-content-box {
+        max-width: 900px;
+        padding: 3rem;
+    }
+}

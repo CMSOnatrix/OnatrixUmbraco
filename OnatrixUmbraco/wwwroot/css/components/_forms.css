@@ -1,34 +1,42 @@
 ﻿/*CALLBACK FORM*/
 
 .about-callback-container {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
     position: relative;
     z-index: 1;
     margin: 1rem;
 }
 
-.about-callback-text{
+.about-callback-text {
+    order: 1;
     justify-content: center;
 }
 
+
 .about-callback-form {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    order: 2;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.20);
     background-color: var(--white);
-    margin-top: -4rem;
-    position:relative;
+    position: relative;
     z-index: 10;
+    margin-top: 0;
 }
+
+.aboutform-header,
+.aboutform-description,
+.callback-inputs {
+    width: 100%;
+}
+
 
 .aboutform-header {
     background-color: var(--background-aboutform-header);
     padding: 2rem 1rem;
     border-bottom: 1px solid var(--divider);
 }
-
 
 .aboutform-title {
     color: var(--text-secondary);
@@ -37,6 +45,7 @@
 .aboutform-description{
     padding: 1.5rem;
 }
+
 
 .callback-inputs {
     display: flex;
@@ -47,32 +56,28 @@
     background-color: var(--white);
 }
 
-.form-group-callback{
-    max-width: 490px;
+.form-group input,
+.callback-select {
+    width: 100%;
+    height: 51px;
+    border: 1px solid var(--border-form-input);
+    padding-inline: 0.75rem;
+    transition: all 0.2s ease;
+    color: var(--text-body);
+    appearance: none;
 }
 
-  .form-group input,
-    .callback-select {
-        width: 100%;
-        height: 51px;
-        border: 1px solid var(--border-form-input);
-        padding-inline: 0.75rem;
-        transition: all 0.2s ease;
-        color: var(--text-body);
-        appearance: none;
+
+    .form-group input:focus,
+    .callback-select:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(var(--primary), 0.25);
     }
 
-   
-        .form-group input:focus,
-        .callback-select:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(var(--primary), 0.25);
-        }
-
-        .form-group input::placeholder {
-            color: var(--text-placeholder);
-        }
+    .form-group input::placeholder {
+        color: var(--text-placeholder);
+    }
 
 
 .select-drop {
@@ -83,7 +88,6 @@
 }
 
     .select-drop select {
-      
         color: var(--text-placeholder);
         cursor: pointer;
     }
@@ -121,6 +125,37 @@
         background-color: var(--secondary-dark);
         box-shadow: 0 3px 8px rgba(0,0,0,0.15);
     }
+
+@media(width >= 768px) {
+.about-callback-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.about-callback-form {  
+    margin-top: -4rem;
+}
+    .form-group-callback {
+        max-width: 490px;
+    }
+
+}
+@media(width >= 1280px) {
+    .about-callback-container {
+   
+        grid-template-columns: 1.5fr 1fr;
+       
+    }
+
+   
+    .form-group-callback {
+        max-width: 490px;
+    }
+}
+
+
 
 
 /*QUESTION FORM */
